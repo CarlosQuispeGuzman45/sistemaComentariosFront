@@ -14,7 +14,7 @@
 
 <ng-container *ngIf="comentario">
   <div class="comentario" style="margin-left: 20px;">
-    <p>{{comentario.id}} {{ comentario.contenido }} {{comentario.fecha}} {{comentario.id_padre}}</p>
+    <p>{{comentario.id}} {{ comentario.contenido }} {{comentario.fecha}} {{comentario.id_padre}} {{comentarioPadre.contenido}}</p>
     <div class="contenedor">
       <div class="boton-icono">
         <button mat-icon-button color="primary" [routerLink]="['responder', comentario.id]">
