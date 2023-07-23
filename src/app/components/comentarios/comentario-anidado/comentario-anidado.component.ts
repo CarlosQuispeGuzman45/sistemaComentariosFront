@@ -20,9 +20,13 @@ export class ComentarioAnidadoComponent implements OnInit {
       data == true ? this.eliminarComentario(this.idMayor) : false;
     });
 
-    this.comentarioService.listarId(this.comentario.id_padre).subscribe(data => {
-      this.comentarioPadre = data;
-    })
+
+    if (this.comentario.id_padre !== null) {
+      this.comentarioService.listarId(this.comentario.id_padre).subscribe(data => {
+        this.comentarioPadre = data;
+      })
+    }
+
   }
 
   confirmar(id: number) {
