@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>Insertar Comentario</h1>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Comentario</mat-label>
+    <input matInput required placeholder="Contenido" [(ngModel)]="comentario.contenido">
+  </mat-form-field>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+  <button mat-raised-button color="warn" routerLink="/comentario">Cancelar</button>
+  <p>{{mensaje}}</p>
+
+</div>

@@ -1,0 +1,32 @@
+<!-- <ng-container *ngIf="comentario">
+  <p>{{comentario.id}} {{ comentario.contenido }} {{comentario.fecha}}</p>
+  <div class="contenedor">
+    <div class="boton-icono">
+      <button mat-icon-button color="primary">
+        <mat-icon>reply</mat-icon>Responder
+      </button>
+    </div>
+  </div>
+  <div style="margin-left: 20px;">
+    <app-comentario-anidado *ngFor="let res of comentario.res" [comentario]="res"></app-comentario-anidado>
+  </div>
+</ng-container> -->
+
+<ng-container *ngIf="comentario">
+  <div class="comentario" style="margin-left: 20px;">
+    <p>{{comentario.id}} {{ comentario.contenido }} {{comentario.fecha}} {{comentario.id_padre}}</p>
+    <div class="contenedor">
+      <div class="boton-icono">
+        <button mat-icon-button color="primary" [routerLink]="['responder', comentario.id]">
+          <mat-icon>reply</mat-icon>Responder
+        </button>
+        <button mat-icon-button color="warn" (click)="confirmar(comentario.id)" style="margin-left: 55px;">
+          <mat-icon>delete</mat-icon>Eliminar
+        </button>
+      </div>
+    </div>
+    <div style="margin-left: 40px;">
+      <app-comentario-anidado *ngFor="let res of comentario.res" [comentario]="res"></app-comentario-anidado>
+    </div>
+  </div>
+</ng-container>

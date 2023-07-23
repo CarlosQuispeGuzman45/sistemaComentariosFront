@@ -1,0 +1,47 @@
+<!-- <ng-container *ngFor="let comentario of comentarios">
+  <p>{{ comentario.contenido }}</p>
+  <div style="margin-left: 20px;" *ngFor="let a of comentario.res">
+    <p>{{a.contenido}}</p>
+    <div style="margin-left: 20px;" *ngFor="let b of a.res">
+      <p>{{b.contenido}}</p>
+    </div>
+  </div>
+</ng-container> -->
+
+
+
+
+<!-- comentarios.component.html -->
+<div class="example-button-container" style="margin-top: 20px;margin-left: 20px; margin-bottom: 20px;">
+  <button mat-raised-button color="primary" routerLink="/comentario/nuevo">Agregar</button>
+</div>
+<ng-container *ngFor="let comentario of comentarios">
+  <app-comentario-anidado [comentario]="comentario"></app-comentario-anidado>
+</ng-container>
+
+
+
+
+
+
+
+
+<!--
+<div *ngFor="let comentario of comentarios">
+  <p>{{ comentario.text }}</p>
+  <div *ngIf="comentario.comentariosRes && comentario.comentariosRes.length > 0">
+    <div style="margin-left: 20px;">
+      <app-lista-comentarios setVariableToModify(comentario.comentariosRes)></app-lista-comentarios>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="margin-left: 20px;">
+      <div *ngFor="let a of comentario.comentariosRes">
+        <p>{{a.text}}</p>
+      </div>
+    </div>
+
+-->
