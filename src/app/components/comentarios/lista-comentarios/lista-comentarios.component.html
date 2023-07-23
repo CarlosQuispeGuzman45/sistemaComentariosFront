@@ -12,12 +12,16 @@
 
 
 <!-- comentarios.component.html -->
-<div class="example-button-container" style="margin-top: 20px;margin-left: 20px; margin-bottom: 20px;">
-  <button mat-raised-button color="primary" routerLink="/comentario/nuevo">Agregar</button>
+<div class="centered-content">
+  <div class="example-button-container">
+    <button mat-raised-button color="primary" routerLink="/comentario/nuevo">Agregar</button>
+  </div>
+  <div class="comments-container">
+    <ng-container *ngFor="let comentario of comentarios">
+      <app-comentario-anidado [comentario]="comentario"></app-comentario-anidado>
+    </ng-container>
+  </div>
 </div>
-<ng-container *ngFor="let comentario of comentarios">
-  <app-comentario-anidado [comentario]="comentario"></app-comentario-anidado>
-</ng-container>
 
 
 
