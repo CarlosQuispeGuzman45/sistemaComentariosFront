@@ -1,0 +1,41 @@
+.example-card {
+  max-width: 280px;
+}
+
+.card{
+  padding: 20px;
+}
+.img-ex{
+  padding: 20px;
+}
+
+.container-profes{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titulo-component{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.calificaion
+{
+  color: #FFA500;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.botones-cards{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}

@@ -17,6 +17,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { DialogoComponent } from './components/comentarios/lista-comentarios/dialogo/dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ProfesoresComponent } from './components/profesores/profesores.component';
+import { ListaProfesoresComponent } from './components/profesores/lista-profesores/lista-profesores.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +28,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     InsertarComentarioComponent,
     ComentariosComponent,
     DialogoComponent,
+    ProfesoresComponent,
+    ListaProfesoresComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatTableModule,
     MatInputModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCardModule
 
   ],
   providers: [],

@@ -1,0 +1,36 @@
+<h1 class="titulo-component">Lista de Profesores</h1>
+<div class="example-button-container">
+  <button mat-raised-button color="primary" routerLink="/comentario/nuevo">Agregar</button>
+</div>
+<div class="container-profes">
+  <ng-container *ngIf="profesores">
+    <ng-container *ngFor="let profe of profesores">
+      <div class="card">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>{{profe.id}} </mat-card-title>
+            <mat-card-subtitle>{{profe.nombre}} {{profe.apellido}}</mat-card-subtitle>
+          </mat-card-header>
+          <div class="img-ex">
+            <img mat-card-image src="./../../../../assets/img/imgDefault.jpg" height="200px" alt="Photo of a Shiba Inu">
+          </div>
+          <mat-card-content>
+            <p class="correo">
+              Correo: {{profe.correo}}
+            </p>
+            <p class="calificaion">
+              Calificacion: {{profe.calificacion}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="botones-cards">
+              <button mat-raised-button color="primary">DETALLE</button>
+              <button mat-raised-button color="accent">EDITAR</button>
+              <button mat-raised-button color="warn">ELIMINAR</button>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>
