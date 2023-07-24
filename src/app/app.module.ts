@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
 import { ListaProfesoresComponent } from './components/profesores/lista-profesores/lista-profesores.component';
 import {MatCardModule} from '@angular/material/card';
+import { DetalleProfesorComponent } from './components/profesores/detalle-profesor/detalle-profesor.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +31,7 @@ import {MatCardModule} from '@angular/material/card';
     DialogoComponent,
     ProfesoresComponent,
     ListaProfesoresComponent,
+    DetalleProfesorComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { ListaComentariosComponent } from './components/comentarios/lista-coment
 import { InsertarComentarioComponent } from './components/comentarios/insertar-comentario/insertar-comentario.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
 import { ProfesoresComponent } from './components/profesores/profesores.component';
+import { DetalleProfesorComponent } from './components/profesores/detalle-profesor/detalle-profesor.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'profesor', component: ProfesoresComponent, children: [
+      { path: 'detalle/:id',component: DetalleProfesorComponent}
 
     ]
   }
